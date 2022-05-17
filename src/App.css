@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 30px;
 }
 
 .App-logo {
@@ -35,4 +36,39 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+.loading {
+  display: flex;
+}
+
+.loading div{
+  width: 5px;
+  height: 5px;
+  background: rgb(37, 48, 85);
+  border-radius: 50%;
+  margin-left: 3px;
+  animation: updown 0.3s infinite alternate;
+}
+
+.loading div:nth-child(2) {
+  animation-delay: 0.2s
+}
+
+.loading div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes updown {
+  to {
+    opacity: 0.2;
+    transform: translatey(-4px)
+  }
+}
+
+.zoom:hover{
+  transform: scale(1.01);
+  background-color: #e6e9ec;
 }
